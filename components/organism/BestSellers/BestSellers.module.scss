@@ -1,0 +1,72 @@
+@import '../../../styles/mixin';
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+.bestSellers {
+    h4 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    & div {
+        @include scrolling-horizontal;
+      
+        .cardProduct {
+            box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+            width: 95%;
+            min-height: 130px;
+            border-radius: 1.25rem;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        h6 {
+            font-size: 0.815rem;
+            font-weight: 400;
+            color: $primaryColor;
+        }
+        
+        h5 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: $primaryColor;
+        }
+        
+        .promoPrice {
+            flex-direction: column;
+
+            h6 {
+                text-decoration: line-through;
+                color: $redColor;
+            }
+
+            h5 {
+                font-size: 0.875rem; 
+                color: $primaryColor;
+            }
+        } 
+        
+        .promo {
+            right: 10px;
+            top: 10px;
+            background-color: $redColor;
+            box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
+            border-radius: 0.75rem;
+            width: auto;
+            height: 28px;
+            
+            p {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: $whiteColor;
+            }
+        }
+                
+        img {
+            width: 100%;
+            height: auto;
+        }       
+    }
+}

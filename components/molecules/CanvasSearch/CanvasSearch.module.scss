@@ -1,0 +1,21 @@
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+.canvasSearch {
+    background-color: $bgColor;
+
+    & .input {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        & a {
+            position: absolute;
+            right: .5rem;
+
+            & img {
+                width: 24px;
+            }
+        }
+    }
+}

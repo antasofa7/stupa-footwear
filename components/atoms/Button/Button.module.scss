@@ -1,0 +1,16 @@
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+.button {
+    
+    & a {
+        @include btn;
+        width: 100%;
+        color: $whiteColor;
+        background-color: $primaryColor;
+        border: 0;
+        padding: .5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+}
