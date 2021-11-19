@@ -6,10 +6,10 @@ export default function Footer() {
         <footer>
             <div className={`${style.footerCard} card mt-3 p-3 p-md-4 p-lg-5 border-0`}>
                 <div className="row mx-lg-4">
-                    <div className={`${style.brand} col-md-4 col-lg-4`}>
+                    <div className={`${style.brand} col-md-4 col-lg-4 d-sm-none d-md-block`}>
                         <Link href="/">
                             <a>
-                                <img className="logo" src="/images/logo.png" alt="logo" />
+                                <img className="logo" src="/images/logo.png" alt="logo" height={42} />
                             </a>
                         </Link>
                         <h4 className="mt-3">

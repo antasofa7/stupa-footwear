@@ -1,3 +1,4 @@
+@import '../../../styles/mixin';
 @import '../../../styles/colors';
 @import '../../../styles/button';
   
@@ -10,18 +11,27 @@
         width: 100%;
         min-height: 180px;
         border-radius: 1.25rem;
+        // @include tablet-screen {
+        //     width: 60%;
+        // }
     }
 
     h5 {
         font-size: 1rem;
         color: $primaryColor;
         font-weight: 500;
+        @include desktop-screen {
+            font-size: 1.125rem
+        }
     }
 
     p {
         font-size: 0.815rem;
         font-weight: 500;
-        color: $primaryColor;
+        color: $greyColor;
+        @include desktop-screen {
+            font-size: 0.875rem;
+        }
     }
 }
   

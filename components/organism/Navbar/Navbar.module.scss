@@ -1,4 +1,5 @@
 @import '../../../styles/mixin';
+@import '../../../styles/colors';
 @import '../../../styles/button';
 
 .brand {
@@ -8,24 +9,49 @@
 
     @include tablet-screen {
       width: auto;
-      height: 2.5rem;
+      height: 42px;
+    }
+    @include desktop-screen {
+      width: auto;
+      height: 48px;
     }
   }
 }
 
 .icon {
   @include tablet-screen {
-    width: 42px;
-    height: auto;
+    img {
+      height: 42px;
+      width: auto;
+    }
+  }
+  @include desktop-screen {
+    img {
+      height: 42px;
+      width: auto;
+    }
   }
 }
 
-.dropdown-menu {
-  margin-top: 30px;
-  background-color: var(--bgColor);
-}
+.nav {
+  background-color: $bgColor;
+  width: 100%;
+  padding-right: 100px;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      a {
+        color: $primaryColor
+      }
 
-// a {
-//   font-size: 1.125rem;
-//   font-weight: 500;
-// }
+      ul {
+        display: none;
+        background-color: $bgColor;
+        color: $primaryColor;
+        margin-top: 10px !important;
+        z-index: -1;
+      }
+    }
+  }
+}

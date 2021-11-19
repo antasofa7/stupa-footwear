@@ -14,6 +14,15 @@
   @include tablet-screen {
     border-radius: 2rem;
   }
+  @include desktop-screen {
+    border-radius: 3rem;
+    width: 90%;
+  }
+  
+
+  span {
+    color: $orangeColor;
+  }
   
   h2 {
     color: $whiteColor;
@@ -24,17 +33,23 @@
     @include tablet-screen {
       font-size: $font-size-banner-md
     }
+    @include desktop-screen {
+      font-size: $font-size-banner-lg;
+    }
   }
   
   & a {
     @include btn-banner-sm;
-    color: $primaryColor;
-    background-color: $whiteColor;
+    color: $whiteColor;
+    background-color: $orangeColor;
 
     @include tablet-screen {
-      font-size: 1.25rem;
-      font-weight: $semi-bold;
-      padding: .5rem 2.5rem;
+      font-size: 1.5rem;
+      padding: 5px 30px;
+    }
+    @include desktop-screen {
+      font-size: 1.8rem;
+      padding: 8px 30px;
     }
   }
 }

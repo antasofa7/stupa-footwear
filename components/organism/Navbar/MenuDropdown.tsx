@@ -22,7 +22,7 @@ export default function MenuDropdown(props: Partial<MenuDropdownProps>) {
           <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <MenuDropdownItem title={dropdownItem1} href={href1} />
             <MenuDropdownItem title={dropdownItem2} href={href2} />
-            <MenuDropdownItem title={dropdownItem3} href={href3} />
+            <MenuDropdownItem title={dropdownItem3 || ''} href={href3 || ''} />
           </ul>
         </li>
   );

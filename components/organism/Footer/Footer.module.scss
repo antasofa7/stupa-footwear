@@ -1,23 +1,40 @@
 @import '../../../styles/colors';
 @import '../../../styles/button';
+@import '../../../styles/mixin';
  
 .footerCard {
   z-index: 2;
   .brand {
-    display: none;
+    img {
+      @include desktop-screen {
+        height: 58px
+      }
+
+    }
   }
 
   h4 {
     font-size: 1rem;
     color: $primaryColor;
+    @include desktop-screen {
+      font-size: 1.25rem;
+      margin-bottom: 20px
+    }
   }
 
   h5 {
     font-size: 0.688rem;
-    color: $primaryColor;
+    color: $greyColor;
+    @include desktop-screen {
+      font-size: .875rem;
+      line-height: 25px
+    }
   }
   p {
     font-size: 0.625rem;
-    color: $greyColor;
+    color: $bgColor;
+    @include desktop-screen {
+      font-size: .875rem
+    }
   }
 }

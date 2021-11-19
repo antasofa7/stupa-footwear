@@ -6,6 +6,12 @@
     h4 {
         font-size: 1rem;
         font-weight: 500;
+        @include tablet-screen {
+            font-size: 1.5rem;
+        }
+        @include desktop-screen {
+            font-size: 1.8rem;
+        }
     }
     
     & div {
@@ -16,6 +22,16 @@
             width: 95%;
             min-height: 130px;
             border-radius: 1.25rem;
+            @include tablet-screen {
+                width: 60%;
+                min-height: 145px;
+                border-radius: 1.5rem;
+            }
+            @include desktop-screen {
+                width: 50%;
+                min-height: 145px;
+                border-radius: 1.8rem;
+            }
         }
         
         a {
@@ -23,15 +39,27 @@
         }
         
         h6 {
-            font-size: 0.815rem;
+            font-size: 0.875rem;
             font-weight: 400;
             color: $primaryColor;
+            @include tablet-screen {
+                font-size: 0.938rem;
+            }
+            @include desktop-screen {
+                font-size: 1.125rem;
+            }
         }
         
         h5 {
             font-size: 0.875rem;
             font-weight: 500;
             color: $primaryColor;
+            @include tablet-screen {
+                font-size: 1rem;
+            }
+            @include desktop-screen {
+                font-size: 1.25rem;
+            }
         }
         
         .promoPrice {
@@ -45,6 +73,12 @@
             h5 {
                 font-size: 0.875rem; 
                 color: $primaryColor;
+                @include tablet-screen {
+                    font-size: 1rem;
+                }
+                @include desktop-screen {
+                    font-size: 1.25rem;
+                }
             }
         } 
         
@@ -56,11 +90,24 @@
             border-radius: 0.75rem;
             width: auto;
             height: 28px;
+            @include tablet-screen {
+                height: 30px;
+            }
+            @include desktop-screen {
+                height: 35px;
+            }
             
             p {
                 font-size: 0.875rem;
                 font-weight: 600;
                 color: $whiteColor;
+                @include tablet-screen {
+                    font-size: .938rem;
+                }
+                @include desktop-screen {
+                    font-size: 1.125rem;
+                    // margin-top: 3px
+                }
             }
         }
                 

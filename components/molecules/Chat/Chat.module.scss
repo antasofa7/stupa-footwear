@@ -1,5 +1,6 @@
 @import '../../../styles/colors';
 @import '../../../styles/button';
+@import '../../../styles/mixin';
 
 .chat {
     right: 1rem;
@@ -10,4 +11,16 @@
     border-radius: 50%;
     /* filter: blur(10px);
     -webkit-filter: blur(10px); */
+    @include desktop-screen {
+    right: 4rem;
+    bottom: 2rem;
+    padding: 5px;
+    }
+
+    img {
+      @include desktop-screen {
+        width: 48px;
+        height: auto;
+      }
+    }
   }

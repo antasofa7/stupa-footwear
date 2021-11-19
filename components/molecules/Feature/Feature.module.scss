@@ -1,3 +1,5 @@
+@import '../../../styles/mixin';
+
 .feature {
     .card {
         border-radius: 1.25rem;
@@ -7,5 +9,21 @@
     h6 {
         font-size: 0.875rem;
         font-weight: 500;
+        @include desktop-screen {
+            font-size: 1.125rem
+        }
+    }
+        
+    @include tablet-screen {
+        img {
+        height: 42px;
+        width: auto;
+        }
+    }
+    @include desktop-screen {
+        img {
+        height: 58px;
+        width: auto;
+        }
     }
 }

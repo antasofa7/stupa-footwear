@@ -1,13 +1,19 @@
+import classname from 'classnames';
 import style from './Testimonial.module.scss';
 
 interface TestimonialItemProps {
-    active?: string;
+    active?: boolean;
 }
 
 export default function TestimonialItem(props: Partial<TestimonialItemProps>) {
   const { active } = props;
+  const classTesti = classname({
+    'carousel-item': true,
+    active,
+  });
+
   return (
-        <div className={`carousel-item ${active}`}>
+        <div className={classTesti}>
             <div className={`${style.card} card mt-1 p-3 border-0 me-4`}>
                 <div className="d-flex align-items-center mb-1">
                     <img src="/icons/userAround.svg" />

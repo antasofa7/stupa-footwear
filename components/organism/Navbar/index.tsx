@@ -9,12 +9,21 @@ import NavIcon from './NavIcon';
 
 export default function Navbar() {
   return (
-    <nav className={`${style.nav} navbar navbar-expand-lg sticky-top px-1 px-md-4 py-lg-4 px-lg-5`}>
-      <NavIcon href="#offcanvasMenu" image="/icons/menuBar.svg" classname={`${style.icon} navbar-toggler p-0 border-0`} canvas="offcanvas" />
-      <CanvasMenu />
-      <NavIcon href="/" image="/images/logo.png" classname={`${style.brand} navbar-brand`} />
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+    <nav className=" sticky-top mb-lg-5 px-1 px-md-4 pt-lg-3 px-lg-5">
+      <div className="navbar navbar-expand-lg justify-content-between">
+        <NavIcon href="#offcanvasMenu" image="/icons/menuBar.svg" classname={`${style.icon} navbar-toggler p-0 border-0`} canvas="offcanvas" />
+        <CanvasMenu />
+        <NavIcon href="/" image="/images/logo.png" classname={`${style.brand} navbar-brand`} />
+        <div className="ms-lg-5">
+          <NavIcon href="#offcanvasSearch" image="/icons/search.svg" canvas="offcanvas" classname={style.icon} />
+          <NavIcon href="sign-in.html" image="/icons/user.svg" classname={`${style.icon} mx-3 mx-lg-4`} />
+          <NavIcon href="#offcanvasCart" image="/icons/bag.svg" canvas="offcanvas" classname={style.icon} />
+          <CanvasSearch />
+          <CanvasCart />
+        </div>
+      </div>
+      <div className={`${style.nav} d-none d-lg-flex`} id="navbarNav">
+        <ul className="ms-auto text-lg gap-lg-0 gap-2">
           <Menu href="/newArrivals" title="New Arrivals" />
           <Menu href="/bestSellers" title="Best Sellers" />
           <MenuDropdown
@@ -52,13 +61,6 @@ export default function Navbar() {
             dropdownItem3="FAQ"
           />
         </ul>
-      </div>
-      <div className="ms-lg-5">
-        <NavIcon href="#offcanvasSearch" image="/icons/search.svg" canvas="offcanvas" />
-        <NavIcon href="sign-in.html" image="/icons/user.svg" classname="mx-3 mx-lg-4" />
-        <NavIcon href="#offcanvasCart" image="/icons/bag.svg" canvas="offcanvas" />
-        <CanvasSearch />
-        <CanvasCart />
       </div>
     </nav>
   );

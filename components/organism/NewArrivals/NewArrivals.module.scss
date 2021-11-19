@@ -12,8 +12,11 @@
 
         @include tablet-screen {
             font-size: 1.5rem;
-            font-weight: 500;
         }
+        @include desktop-screen {
+            font-size: 1.8rem;
+        }
+
     }
 
     & div {
@@ -31,6 +34,11 @@
                 width: 30%;
                 min-height: 220px;
                 border-radius: 1.5rem;
+            }
+            @include desktop-screen {
+                width: 30%;
+                min-height: 220px;
+                border-radius: 1.8rem;
             }
         }
     }
@@ -55,6 +63,10 @@
             font-size: 0.875rem;
             font-weight: 400;
         }
+        @include desktop-screen {
+            font-size: 0.938rem;
+            font-weight: 400;
+        }
     }
     
     & h5 {
@@ -63,6 +75,9 @@
         color: $primaryColor;
         @include tablet-screen {
             font-size: 0.938rem;
+        }
+        @include desktop-screen {
+            font-size: 1rem;
         }
     }
 }

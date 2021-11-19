@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 
 html,
 body {
@@ -18,6 +19,9 @@ nav {
 main {
   width: 95%;
   margin: auto;
+  @include desktop-screen {
+    width: 90%;
+  }
 }
 /* * {
   box-sizing: border-box;

@@ -1,3 +1,4 @@
+import classname from 'classnames';
 import style from './CanvasCart.module.scss';
 
 interface CartItemProps {
@@ -14,10 +15,17 @@ export default function CartItem(props: Partial<CartItemProps>) {
   const {
     position, title, price, promo, promoPrice, promoValue, image,
   } = props;
+
+  const classCart = classname({
+    'col-6': true,
+    'p-1': true,
+    position,
+  });
+
   return (
         <div className={`${style.cardProduct} card border-0 mb-2 mt-md-2 p-2`}>
             <div className="row d-flex align-items-center">
-                <div className={`${position} col-6 p-1`}>
+                <div className={`col-6 p-1 ${position}`}>
                     {promo ? (
                         <div className={style.promo}>
                             <p className="px-2 pt-1">

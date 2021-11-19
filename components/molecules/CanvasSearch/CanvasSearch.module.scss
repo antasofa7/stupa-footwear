@@ -1,13 +1,26 @@
 @import '../../../styles/colors';
 @import '../../../styles/button';
+@import '../../../styles/mixin';
 
 .canvasSearch {
     background-color: $bgColor;
+    height: 180px;
 
     & .input {
         display: flex;
         align-items: center;
         position: relative;
+        width: 90%;
+        margin: auto;
+
+        input {
+            @include tablet-screen {
+                height: 50px;
+            }
+            @include desktop-screen {
+                height: 60px;
+            }
+        }
 
         & a {
             position: absolute;

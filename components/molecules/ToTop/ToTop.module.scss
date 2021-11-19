@@ -1,3 +1,5 @@
+@import '../../../styles/mixin';
+
 .toTop {
     z-index: 99;
     /* background-color: var(--bgColor); */
@@ -5,4 +7,9 @@
     /* border-radius: 50%; */
     /* filter: blur(10px);
     -webkit-filter: blur(10px); */
+    img {
+      @include desktop-screen {
+        width: 48px
+      }
+    }
   }

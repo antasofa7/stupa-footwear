@@ -17,7 +17,6 @@ export default function MenuAccordionItem(props: Partial<MenuAccordionItemProps>
   const {
     title, idCollapse, idHeading, href1, href2, href3, itemDropdown1, itemDropdown2, itemDropdown3,
   } = props;
-  console.log(href3);
   return (
         <div className={`${style.accordionItem} accordion-item`}>
             <h2 className="accordion-header" id={idHeading}>
