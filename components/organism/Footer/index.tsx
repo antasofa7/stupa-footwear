@@ -6,7 +6,7 @@ export default function Footer() {
         <footer>
             <div className={`${style.footerCard} card mt-3 p-3 p-md-4 p-lg-5 border-0`}>
                 <div className="row mx-lg-4">
-                    <div className={`${style.brand} col-md-4 col-lg-4 d-sm-none d-md-block`}>
+                    <div className={`${style.brand} col-md-4 col-lg-4 d-none d-md-block`}>
                         <Link href="/">
                             <a>
                                 <img className="logo" src="/images/logo.png" alt="logo" height={42} />
@@ -21,21 +21,31 @@ export default function Footer() {
                     </div>
                     <div className="col-6 col-md-4 col-lg-4">
                         <h4>Information</h4>
-                        <a href="">
-                            <h5>Payment Confirmation</h5>
-                        </a>
-                        <a href="">
-                            <h5>How to Order</h5>
-                        </a>
-                        <a href="">
-                            <h5>Size Guide</h5>
-                        </a>
-                        <a href="">
-                            <h5>Tips</h5>
-                        </a>
-                        <a href="">
-                            <h5>FAQ</h5>
-                        </a>
+                        <Link href="">
+                            <a>
+                                <h5>Payment Confirmation</h5>
+                            </a>
+                        </Link>
+                        <Link href="">
+                            <a>
+                                <h5>How to Order</h5>
+                            </a>
+                        </Link>
+                        <Link href="">
+                            <a>
+                                <h5>Size Guide</h5>
+                            </a>
+                        </Link>
+                        <Link href="">
+                            <a>
+                                <h5>Tips</h5>
+                            </a>
+                        </Link>
+                        <Link href="">
+                            <a>
+                                <h5>FAQ</h5>
+                            </a>
+                        </Link>
                     </div>
                     <div className="col-6 col-md-4 col-sm-4">
                         <h4>Contact Us</h4>

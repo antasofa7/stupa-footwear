@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from './Banner.module.scss';
 
 export default function Banner() {
@@ -12,7 +13,9 @@ export default function Banner() {
                     <br />
                     With Our Shoes
                 </h2>
-                <a href="list.html" type="button">Explore</a>
+                <Link href="/collections">
+                    <a type="button">Explore</a>
+                </Link>
             </div>
             <div className="col-7">
                 <img className="img-fluid" src="/images/banner.png" alt="" />

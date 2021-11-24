@@ -13,7 +13,7 @@
     }
     @include desktop-screen {
       width: auto;
-      height: 48px;
+      height: 42px;
     }
   }
 }
@@ -36,22 +36,44 @@
 .nav {
   background-color: $bgColor;
   width: 100%;
-  padding-right: 100px;
+  padding-right: 50px;
   ul {
     display: flex;
+    margin-bottom: 5px;
     li {
       list-style: none;
       a {
-        color: $primaryColor
+        color: $primaryColor;
+        &:hover { 
+          text-decoration: underline;
+        }
       }
-
+      &:hover > ul{
+        display: block;
+      }
+      
       ul {
         display: none;
         background-color: $bgColor;
         color: $primaryColor;
-        margin-top: 10px !important;
-        z-index: -1;
+        margin-top: 4px !important;
+
+        &:after{
+          content:''; /* Required to display content */
+          position: absolute; /* Sets the position absolute to the top div */
+          top: 0;
+          left: 30%;/* position the little arrow */
+          margin-left: -10px;
+          margin-top:-10px; /* Set margin equal to border px */
+          width: 0;
+          z-index:1;
+          height: 0;
+          border-bottom: solid 10px $greyColor; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+          border-left: solid 10px transparent; /* Creates triangle effect */
+          border-right: solid 10px transparent; /* Creates triangle effect */
       }
+      }
+      
     }
   }
 }

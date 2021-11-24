@@ -12,9 +12,13 @@
     /* filter: blur(10px);
     -webkit-filter: blur(10px); */
     @include desktop-screen {
-    right: 4rem;
-    bottom: 2rem;
-    padding: 5px;
+      right: 4rem;
+      bottom: 2rem;
+      transition: transform 2s;
+      &:hover {
+        background: radial-gradient($primaryColor, $secondaryColor);
+        transform: rotateY(360deg);
+      }
     }
 
     img {

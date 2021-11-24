@@ -79,7 +79,7 @@ export default function CanvasMenu() {
         </div>
 
         <div className="mt-4 mb-2">
-          <Button href="/signIn" title="Sign In" />
+          <Button href="/sign-in" title="Sign In" />
         </div>
       </div>
     </div>

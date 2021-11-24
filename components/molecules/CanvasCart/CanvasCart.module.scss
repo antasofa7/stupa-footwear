@@ -4,10 +4,6 @@
 .canvasCart {
     background-color: $bgColor;
 
-    h5 {
-        color: $primaryColor;
-        font-weight: 400;
-    }
     .cardProduct {
         box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
         width: 100%;
@@ -35,7 +31,12 @@
         font-weight: 500;
         color: $primaryColor;
     }
-    
+
+    h4 {
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+
     .promoPrice {
         flex-direction: column;
 

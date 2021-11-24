@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import style from './NewArrivals.module.scss';
+import style from './SeeAlso.module.scss';
 
 interface ProductItemProps {
     href: any;
@@ -13,13 +13,13 @@ export default function ProductItem(props: ProductItemProps) {
     href, image, title, price,
   } = props;
   return (
-        <div className={`${style.cardProduct} card border-0 px-3 py-2 me-2 me-md-3`}>
+        <div className={`${style.cardProduct} card border-0 px-3 py-2 me-2 me-md-3 flex-column`}>
             <Link href={href}>
                 <a>
-                    <div className={style.cardImg}>
+                    <div className="mx-auto mb-2">
                         <img src={`/images/${image}.png`} alt={image} />
                     </div>
-                    <div className={style.cardBody}>
+                    <div className="flex-column">
                         <h6>{title}</h6>
                         <h5>{price}</h5>
                     </div>

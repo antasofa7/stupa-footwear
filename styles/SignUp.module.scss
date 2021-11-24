@@ -1,0 +1,78 @@
+@import './styles/mixin';
+@import './styles/colors';
+@import './styles/button';
+
+
+.signIn {
+    height: 100vh;
+
+    .illustration {
+        height: 40vh;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    
+    .formSignIn {
+        z-index: 1;
+        position: relative;
+        
+        /* height: 60vh; */
+        background-image: linear-gradient(300deg, $primaryColor, $secondaryColor) ;
+        border-radius: 40px 40px 0 0;
+        box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+
+        h2 {
+            color: $whiteColor;
+            font-size: 1.625rm;
+            font-weight: 700;
+        }
+
+        input {
+            background-color: transparent;
+            color: $whiteColor;
+        }
+
+        label {
+            color: $greyColor;
+        }
+
+        svg {
+            position: absolute;
+            right: 10px;
+        }
+        
+        a {
+            /* text-decoration: none; */
+            color: $greyColor;
+            font-size: 0.825rem;
+            font-weight: 500;
+        }
+        
+        h4 {
+            color: $whiteColor;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        h5 {
+            color: $primaryColor;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .btnSignIn {
+            @include btn;
+            justify-content: center;
+            background-color: $whiteColor;
+            border-radius: 50%;
+            border: 0;
+            width: 45px;
+            height: 45px;
+        }
+    }
+    
+}

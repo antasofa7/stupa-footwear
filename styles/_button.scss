@@ -22,7 +22,15 @@
 
 @mixin btn-banner-md {
     @include btn;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: $semi-bold;
     padding: .5rem 2.5rem;
+}
+
+@mixin btn-banner-lg {
+    @include btn;
+    font-size: 1.8rem;
+    font-weight: $semi-bold;
+    padding: .4rem 2.5rem;
+    border: 4px solid $orangeColor;
 }

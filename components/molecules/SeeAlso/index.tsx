@@ -1,16 +1,10 @@
-import Link from 'next/link';
+import style from './SeeAlso.module.scss';
 import ProductItem from './ProductItem';
-import style from './NewArrivals.module.scss';
 
-export default function NewArrivals() {
+export default function SeeAlso() {
   return (
-        <section className={style.newArrivals}>
-          <div className="d-flex justify-content-between justify-content-lg-center align-items-center mt-3 mt-md-4 mt-lg-5 mb-lg-3">
-            <h4 className="text-lg-center">New Arrivals</h4>
-            <h6 className="d-lg-none">
-              <Link href="/collections"><a>View all</a></Link>
-            </h6>
-          </div>
+        <section className={`${style.newArrivals} d-none d-sm-block mb-4`}>
+          <h4 className="mt-3 mt-md-4 mt-lg-5 mb-lg-3 text-md-center text-lg-center">- See also -</h4>
           <div>
                 <ProductItem href="/detail" image="product-1" title="Ortuseight Forte Instinct In" price="Rp 355.000" />
                 <ProductItem href="/detail" image="product-2" title="Patrobas Catalyst" price="Rp 380.000" />

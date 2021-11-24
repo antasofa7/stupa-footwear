@@ -1,0 +1,161 @@
+@import '../../../styles/mixin';
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+.catalog {
+    h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        @include tablet-screen {
+            font-size: 1.25rem;
+        }
+        @include desktop-screen {
+            font-size: 1.5rem;
+        }
+    }
+    .cardProduct {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+        width: 95%;
+        min-height: 220px;
+        border-radius: 1.25rem;
+        @include tablet-screen {
+            min-height: 260px;
+        }
+        @include desktop-screen {
+            min-height: 280px
+        }
+
+        .cardImg {
+            min-height: 130px;
+            justify-content: center;
+            @include tablet-screen {
+                height: 180px;
+            }
+            @include desktop-screen {
+                max-height: 200px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                @include desktop-screen {
+                    width: 90%;
+                    &:hover {
+                        width: 100%;
+                        transition: ease-in-out .5s;
+                    }
+                }
+            }
+        }
+
+        .cardBody {
+            min-height: 2rem;
+            padding: 0 1rem;
+            h6 {
+                font-size: 0.75rem;
+                font-weight: 400;
+                color: $primaryColor;
+                @include tablet-screen {
+                    font-size: 0.873rem;
+                }
+                @include desktop-screen {
+                    font-size: .925rem;
+                }
+            }
+            h5 {
+                font-size: 0.813rem;
+                font-weight: 500;
+                color: $primaryColor;
+                @include tablet-screen {
+                    font-size: 0.873rem;
+                }
+                @include desktop-screen {
+                    font-size: .95rem;
+                }
+            }
+            
+            .promoPrice {
+                h6 {
+                    text-decoration: line-through;
+                    color: $redColor;
+                    font-size: 0.813rem; 
+                    @include tablet-screen {
+                        font-size: 0.873rem;
+                    }
+                    @include desktop-screen {
+                        font-size: .925rem;
+                    }
+                }
+                h5 {
+                    line-height: 3px;
+                    font-size: 0.915rem; 
+                    color: $primaryColor;
+                    @include tablet-screen {
+                        font-size: 0.925rem;
+                    }
+                    @include desktop-screen {
+                        font-size: 1rem;
+                    }
+                }    
+            } 
+        }
+    }
+    
+    a {
+        text-decoration: none;
+    }
+
+    
+    .promo {
+        right: 10px;
+        top: 10px;
+        background-color: $redColor;
+        box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
+        border-radius: 0.75rem;
+        width: auto;
+        height: 25px;
+        @include tablet-screen {
+            height: 28px;
+        }
+        @include desktop-screen {
+            height: 32px;
+        }
+        p {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: $whiteColor;
+            @include tablet-screen {
+                font-size: 0.95rem;
+            }
+            @include desktop-screen {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .btnMore {
+        border: 1px solid $primaryColor;
+        color: $primaryColor;
+        font-size: 0.75rem;
+        font-weight: 500;
+        border-radius: 10px;
+        padding: .3rem .915rem;
+        
+        @include tablet-screen {
+            font-size: 0.85rem;
+            padding: .3rem .915rem;
+        }
+        @include desktop-screen {
+            font-size: 1rem;
+            padding: .4rem 1rem;
+            &:hover {
+                background-color: $primaryColor;
+                color: $whiteColor;
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
+

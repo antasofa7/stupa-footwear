@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import classname from 'classnames';
 import style from './CanvasCart.module.scss';
 
@@ -58,9 +59,11 @@ export default function CartItem(props: Partial<CartItemProps>) {
                                 <a className={style.btnPlus} href="">+</a>
                             </div>
                         </div>
-                        <a href="" className="col-4">
-                            <img src="/icons/trash.svg" alt="" />
-                        </a>
+                        <Link href="">
+                            <a className="col-4">
+                                <img src="/icons/trash.svg" alt="" />
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -44,12 +44,13 @@
     background-color: $orangeColor;
 
     @include tablet-screen {
-      font-size: 1.5rem;
-      padding: 5px 30px;
+      @include btn-banner-md;
     }
     @include desktop-screen {
-      font-size: 1.8rem;
-      padding: 8px 30px;
+      @include btn-banner-lg;
+      &:hover {
+        opacity: .9;
+      }
     }
   }
 }

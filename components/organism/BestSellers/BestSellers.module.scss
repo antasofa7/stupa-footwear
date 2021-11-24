@@ -13,8 +13,17 @@
             font-size: 1.8rem;
         }
     }
+
+    h6 {
+        a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: $greyColor;
+            text-decoration: underline !important
+        }
+    }
     
-    & div {
+    div {
         @include scrolling-horizontal;
       
         .cardProduct {
@@ -32,46 +41,40 @@
                 min-height: 145px;
                 border-radius: 1.8rem;
             }
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        h6 {
-            font-size: 0.875rem;
-            font-weight: 400;
-            color: $primaryColor;
-            @include tablet-screen {
-                font-size: 0.938rem;
+            
+            img {
+                width: 100%;
+                height: auto;
+                @include desktop-screen {
+                    width: 95%;
+                    height: 95%;
+                    &:hover {
+                        width: 100%;
+                        height: 100%;
+                        transition: ease-out .5s;
+                    }
+                }
             }
-            @include desktop-screen {
-                font-size: 1.125rem;
+            
+            a {
+                text-decoration: none;
             }
-        }
-        
-        h5 {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: $primaryColor;
-            @include tablet-screen {
-                font-size: 1rem;
-            }
-            @include desktop-screen {
-                font-size: 1.25rem;
-            }
-        }
-        
-        .promoPrice {
-            flex-direction: column;
-
+            
             h6 {
-                text-decoration: line-through;
-                color: $redColor;
+                font-size: 0.875rem;
+                font-weight: 400;
+                color: $primaryColor;
+                @include tablet-screen {
+                    font-size: 0.938rem;
+                }
+                @include desktop-screen {
+                    font-size: 1.125rem;
+                }
             }
-
+            
             h5 {
-                font-size: 0.875rem; 
+                font-size: 0.875rem;
+                font-weight: 500;
                 color: $primaryColor;
                 @include tablet-screen {
                     font-size: 1rem;
@@ -80,40 +83,56 @@
                     font-size: 1.25rem;
                 }
             }
-        } 
-        
-        .promo {
-            right: 10px;
-            top: 10px;
-            background-color: $redColor;
-            box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
-            border-radius: 0.75rem;
-            width: auto;
-            height: 28px;
-            @include tablet-screen {
-                height: 30px;
-            }
-            @include desktop-screen {
-                height: 35px;
-            }
             
-            p {
-                font-size: 0.875rem;
-                font-weight: 600;
-                color: $whiteColor;
+            .promoPrice {
+                flex-direction: column;
+    
+                h6 {
+                    text-decoration: line-through;
+                    color: $redColor;
+                }
+    
+                h5 {
+                    font-size: 0.875rem; 
+                    color: $primaryColor;
+                    @include tablet-screen {
+                        font-size: 1rem;
+                    }
+                    @include desktop-screen {
+                        font-size: 1.25rem;
+                    }
+                }
+            } 
+            
+            .promo {
+                right: 10px;
+                top: 10px;
+                background-color: $redColor;
+                box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
+                border-radius: 0.75rem;
+                width: auto;
+                height: 28px;
                 @include tablet-screen {
-                    font-size: .938rem;
+                    height: 30px;
                 }
                 @include desktop-screen {
-                    font-size: 1.125rem;
-                    // margin-top: 3px
+                    height: 35px;
                 }
-            }
-        }
                 
-        img {
-            width: 100%;
-            height: auto;
-        }       
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    color: $whiteColor;
+                    @include tablet-screen {
+                        font-size: .938rem;
+                    }
+                    @include desktop-screen {
+                        font-size: 1.125rem;
+                        // margin-top: 3px
+                    }
+                }
+        }
+        
+        }  
     }
 }

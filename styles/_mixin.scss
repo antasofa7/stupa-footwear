@@ -4,13 +4,13 @@
   overflow-x: scroll;
   overflow-y: hidden;
   // width:100%;
+  -webkit-overflow-scrolling: auto;
 
-  & ::-webkit-scrollbar { 
+  &::-webkit-scrollbar { 
     display: none;
-    -webkit-overflow-scrolling: auto;
   }
   
-  & > .cardProduct {
+  &> .cardProduct {
     flex: 0 0 auto;
   }
 }

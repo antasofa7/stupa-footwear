@@ -1,0 +1,21 @@
+@import '../../../styles/mixin';
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+    .sizeProduct {
+        .size {
+            padding: 0.5rem;
+            width: 40px;
+            margin: 0.375rem;
+            border-radius: 20%;
+            background-color: $bgColor;
+            box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+            font-size: 1rem;
+            color: $primaryColor;
+            font-weight: 500;   
+        } 
+        a {
+            text-decoration: underline;
+            color: $greyColor;
+        }
+    }
