@@ -7,12 +7,12 @@ import Brand from '../components/molecules/Brand';
 import NewArrivals from '../components/organism/NewArrivals';
 import Chat from '../components/molecules/Chat';
 import BestSellers from '../components/organism/BestSellers';
-import Feature from '../components/molecules/Feature';
+import Feature from '../components/organism/Feature';
 import ToTop from '../components/molecules/ToTop';
+import Testimonial from '../components/organism/Testimonial';
+import Footer from '../components/organism/Footer';
 
 import '../styles/Home.module.scss';
-import Testimonial from '../components/molecules/Testimonial';
-import Footer from '../components/organism/Footer';
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -21,8 +21,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Navbar />
-      <Banner />
       <main>
+        <Banner />
         <Brand />
         <NewArrivals />
         <Chat />
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         <ToTop />
         <Testimonial />
 
-        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
               <div className="modal-header">

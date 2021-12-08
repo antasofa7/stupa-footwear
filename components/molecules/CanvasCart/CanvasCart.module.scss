@@ -89,19 +89,8 @@
         color: $whiteColor;
     }
 
-    .cartDetail {
-        border-radius: .75rem;
-        color: $primaryColor;
-
-        table {
-            font-size: .875rem;
-            line-height: 1.5rem;
-
-            .total {
-                font-size: 1rem;
-                font-weight: 500;
-            }
-        }
+    .cartItem {
+        min-height: 73vh;
     }
     
 }

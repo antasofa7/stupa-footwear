@@ -9,7 +9,7 @@ import NavIcon from './NavIcon';
 
 export default function Navbar() {
   return (
-    <nav className={`${style.nav} navbar navbar-expand-lg sticky-top px-1 px-md-4 py-lg-4 px-lg-5`}>
+    <nav className={`${style.nav} navbar navbar-expand-lg sticky-top px-3 px-md-4 py-lg-4 px-lg-5`}>
       <NavIcon href="#offcanvasMenu" image="/icons/menuBar.svg" classname={`${style.icon} navbar-toggler p-0 border-0`} canvas="offcanvas" />
       <CanvasMenu />
       <NavIcon href="/" image="/images/logo.png" classname={`${style.brand} navbar-brand`} />
@@ -19,43 +19,43 @@ export default function Navbar() {
           <Menu href="/bestSellers" title="Best Sellers" />
           <MenuDropdown
             title="Sneakers"
-            href1=""
+            href1="/collections"
             dropdownItem1="Kofuku"
-            href2=""
+            href2="/collections"
             dropdownItem2="Ortuseight"
-            href3=""
+            href3="/collections"
             dropdownItem3="Ventela"
           />
           <MenuDropdown
             title="Sports"
-            href1=""
+            href1="/collections"
             dropdownItem1="Piero"
-            href2=""
+            href2="/collections"
             dropdownItem2="Patrobas"
-            href3=""
+            href3="/collections"
             dropdownItem3="Specs"
           />
           <MenuDropdown
             title="Others"
-            href1=""
+            href1="/collections"
             dropdownItem1="Tas"
-            href2=""
+            href2="/collections"
             dropdownItem2="Accesories"
           />
           <MenuDropdown
             title="Info"
-            href1=""
+            href1="/collections"
             dropdownItem1="Payment Confirmation"
-            href2=""
+            href2="/collections"
             dropdownItem2="How to Order"
-            href3=""
+            href3="/collections"
             dropdownItem3="FAQ"
           />
         </ul>
       </div>
       <div className="ms-lg-5">
         <NavIcon href="#offcanvasSearch" image="/icons/search.svg" canvas="offcanvas" />
-        <NavIcon href="sign-in.html" image="/icons/user.svg" classname="mx-3 mx-lg-4" />
+        <NavIcon href="/member" image="/icons/user.svg" classname="mx-3 mx-lg-4" />
         <NavIcon href="#offcanvasCart" image="/icons/bag.svg" canvas="offcanvas" />
         <CanvasSearch />
         <CanvasCart />

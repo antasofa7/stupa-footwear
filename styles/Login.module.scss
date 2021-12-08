@@ -1,0 +1,114 @@
+@import './colors';
+@import './font';
+
+.login {
+    // min-height: 100vh;
+    .loginIllustration {
+        height: 40vh;
+        padding: 1rem;
+    }
+    
+    .loginArea {
+        position: relative;
+        z-index: 1;
+        min-height: 60vh;
+        padding: 3rem;
+        border-radius: 40px 40px 0 0;
+        background-color: $primaryColor;
+        
+        h4 {
+            font-size: 1.75rem;
+            font-weight: $semi-bold;
+            color: $whiteColor;
+            margin-bottom: 2rem;
+        }
+        
+        label{
+            margin-bottom: 10px;
+            position: relative;
+            border-bottom: 1px solid $greyColor;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: $medium;
+            background-color: transparent;
+            color: $whiteColor;
+            
+            &::placeholder{
+                transition-duration: .6s;
+            }
+        }
+        span{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            color: $whiteColor;
+            transition-duration: .8s;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        label:focus-within > span,
+        input:not(:placeholder-shown) + span {
+            opacity: 1;
+            font-size: .75rem;
+            left: 0;
+            transform: translateY(0px);
+        }
+        input:focus {
+            border-bottom: 1px solid $whiteColor;
+            &::placeholder{
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+        }
+
+        > a {
+            float: right;
+            font-size: .813rem;
+            color: $bgColor;
+            margin-top: 10px;
+        }
+
+        @mixin button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h5 {
+                color: $whiteColor;
+                font-size: 1.125rem;
+                font-weight: $medium;
+                margin-top: 5px;
+            }
+            a {
+                text-decoration: none;
+                background: $whiteColor;
+                padding: 10px 11px;
+                border-radius: 50%;
+            }
+        }
+
+        .btnLogin {
+            @include button;
+            margin-top: 60px;
+        }
+
+        .btnRegister {
+            @include button;
+            margin-top: 30px;
+        }
+
+        .register {
+            margin-top: 2rem;
+            font-size: .875rem;
+            color: $bgColor;
+            a {
+                color: $whiteColor;
+            }
+        }
+    }
+}

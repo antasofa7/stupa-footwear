@@ -13,7 +13,7 @@ export default function ProductItem(props: ProductItemProps) {
     href, image, title, price,
   } = props;
   return (
-        <div className={`${style.cardProduct} card border-0 px-3 py-2 me-2 me-md-3 flex-column`}>
+        <div className={`${style.cardProduct} card border-0 px-3 py-2`}>
             <Link href={href}>
                 <a>
                     <div className="mx-auto mb-2">

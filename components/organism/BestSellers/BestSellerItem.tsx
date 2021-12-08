@@ -2,7 +2,6 @@ import Link from 'next/link';
 import style from './BestSellers.module.scss';
 
 interface BestSellerItemProps {
-    position?: string;
     href: any;
     title: string;
     price: string;
@@ -14,10 +13,10 @@ interface BestSellerItemProps {
 
 export default function BestSellerItem(props: Partial<BestSellerItemProps>) {
   const {
-    position, href, title, price, promo, promoPrice, promoValue, image,
+    href, title, price, promo, promoPrice, promoValue, image,
   } = props;
   return (
-        <div className={`${style.cardProduct} card border-0 me-2 p-2 ${position}`}>
+        <div className={`${style.cardProduct} card border-0 p-2`}>
             <Link href={href}>
                 <a>
                     <div className="row align-items-center gx-0">
@@ -34,7 +33,7 @@ export default function BestSellerItem(props: Partial<BestSellerItemProps>) {
                         </div>
                         <div className="col-7">
                             {promo ? (
-                                <div className={`${style.promo} position-absolute`}>
+                                <div className={style.promo}>
                                     <p className="px-3 pt-1">
                                         {promoValue}
                                         %

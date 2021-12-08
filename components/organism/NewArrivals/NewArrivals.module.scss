@@ -1,14 +1,13 @@
 @import '../../../styles/mixin';
 @import '../../../styles/colors';
 @import '../../../styles/button';
-
-
-/* new arrivals */
+@import '../../../styles/font';
 
 .newArrivals {
     h4 {
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: $medium;
+        color: $primaryColor;
 
         @include tablet-screen {
             font-size: 1.5rem;
@@ -20,6 +19,7 @@
         @include scrolling-horizontal;
 
         .cardProduct {
+            margin-right: 10px;
             justify-content: center;
             text-align: center;
             box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
@@ -32,13 +32,11 @@
                 min-height: 220px;
                 border-radius: 1.5rem;
             }
+            
+            & a {
+                text-decoration: none;
+            }
         }
-    }
-
-    
-
-    & a {
-        text-decoration: none;
     }
 
     & img {

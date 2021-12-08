@@ -37,49 +37,49 @@ export default function CanvasMenu() {
               title="Sneakers"
               idCollapse="flush-collapseSneakers"
               idHeading="flush-headingSneakers"
-              href1=""
+              href1="/collections"
               itemDropdown1="Warriors"
-              href2=""
+              href2="/collections"
               itemDropdown2="Kofuku"
-              href3=""
+              href3="/collections"
               itemDropdown3="Ventela"
             />
             <MenuAccordionItem
               title="Sports"
               idCollapse="flush-collapseSports"
               idHeading="flush-headingSports"
-              href1=""
+              href1="/collections"
               itemDropdown1="Patrobas"
-              href2=""
+              href2="/collections"
               itemDropdown2="Piero"
-              href3=""
+              href3="/collections"
               itemDropdown3="Specs"
             />
             <MenuAccordionItem
               title="Others"
               idCollapse="flush-collapseOthers"
               idHeading="flush-headingOthers"
-              href1=""
+              href1="/collections"
               itemDropdown1="Tas"
-              href2=""
+              href2="/collections"
               itemDropdown2="Accesories"
             />
             <MenuAccordionItem
               title="Info"
               idCollapse="flush-collapseInfo"
               idHeading="flush-headingInfo"
-              href1=""
+              href1="/collections"
               itemDropdown1="Payment Confirmation"
-              href2=""
+              href2="/collections"
               itemDropdown2="Size Guide"
-              href3=""
+              href3="/collections"
               itemDropdown3="FAQ"
             />
           </div>
         </div>
 
         <div className="mt-4 mb-2">
-          <Button href="/signIn" title="Sign In" />
+          <Button href="/login" title="Sign In" />
         </div>
       </div>
     </div>

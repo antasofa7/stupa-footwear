@@ -1,0 +1,23 @@
+@import '../../../styles/colors';
+@import '../../../styles/button';
+
+.canvasSize {
+    background-color: $bgColor;
+    height: 30vh;
+    border-radius: 40px 40px 0 0;
+
+    & .input {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        & a {
+            position: absolute;
+            right: .5rem;
+
+            & img {
+                width: 24px;
+            }
+        }
+    }
+}

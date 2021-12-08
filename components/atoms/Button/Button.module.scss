@@ -2,14 +2,15 @@
 @import '../../../styles/button';
 
 .button {
-    
-    & a {
-        @include btn;
-        width: 100%;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+  & a {
         color: $whiteColor;
-        background-color: $primaryColor;
+        @include btn;
         border: 0;
+        border-radius: 1.5rem;
         padding: .5rem;
+        background-color: $primaryColor;
         font-size: 1.125rem;
         font-weight: 600;
       }

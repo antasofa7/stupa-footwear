@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+@import '../../../styles/font';
+
+
+.sizes {
+    h6 {
+        color: $primaryColor !important;
+        font-size: .875;
+        font-weight: $medium;
+    }
+    .size {
+        label {
+            padding: 0.5rem;
+            width: 40px;
+            margin: 0.3rem;
+            border-radius: 20%;
+            background-color: $bgColor;
+            box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.2);
+            font-size: 1rem;
+            color: $primaryColor;
+            font-weight: 500;
+        }
+        input[type="radio"] {
+            display: none;
+            &:checked ~ .label {
+                background-color: $primaryColor;
+                color: $whiteColor;
+            }
+        }
+    }
+
+    a {
+        color: $greyColor;
+        font-size: .875rem;
+    }
+}
+
+    

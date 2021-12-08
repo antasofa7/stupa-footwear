@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from './CanvasMenu.module.scss';
 
 interface AccordionItemProps {
@@ -12,10 +13,12 @@ export default function AccordionItem(props: AccordionItemProps) {
             {href !== undefined
               ? (
             <div className={style.accordionBody}>
-                <a className="btn d-flex justify-content-between align-items-center" href={href}>
+              <Link href={href}>
+                <a className="btn d-flex justify-content-between align-items-center">
                     {title}
                     <img src="/icons/chevron-right.svg" alt="" />
                 </a>
+              </Link>
             </div>
               ) : ''}
         </div>

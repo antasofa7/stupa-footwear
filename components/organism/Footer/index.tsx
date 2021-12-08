@@ -4,7 +4,7 @@ import style from './Footer.module.scss';
 export default function Footer() {
   return (
         <footer>
-            <div className={`${style.footerCard} card mt-3 p-3 p-md-4 p-lg-5 border-0`}>
+            <div className={`${style.footerCard} card p-3 p-md-4 p-lg-5 border-0`}>
                 <div className="row mx-lg-4">
                     <div className={`${style.brand} col-md-4 col-lg-4`}>
                         <Link href="/">
