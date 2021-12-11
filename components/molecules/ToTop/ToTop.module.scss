@@ -2,11 +2,11 @@
 
 .toTop {
     z-index: 99;
-    /* background-color: var(--bgColor); */
-    /* box-shadow: 0px 4px 8px rgba(0, 9, 50, 0.1); */
-    /* border-radius: 50%; */
-    /* filter: blur(10px);
-    -webkit-filter: blur(10px); */
+    bottom: 10px;
+    button {
+      background: transparent;
+      border: 0;
+    }
     img {
       @include desktop-screen {
         width: 48px

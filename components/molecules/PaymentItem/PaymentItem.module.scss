@@ -1,0 +1,36 @@
+@import '../../../styles/colors';
+
+.payment {
+    margin-bottom: 10px;
+    .paymentCard {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border-radius: .25rem;
+        h4, h5, h6 {
+            position: absolute;
+            color: $whiteColor;
+        }
+    
+        h4{
+            left: 30px;
+            bottom: 30px;
+        }
+
+        h5 {
+            font-size: 1rem;
+            top: 16px;
+            right: 16px;
+        }
+
+        h6 {
+            font-size: .875rem;
+            bottom: 10px;
+            left: 30px;
+        }
+    }
+}

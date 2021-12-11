@@ -1,6 +1,6 @@
 @import '../../../styles/mixin';
-@import '../../../styles/colors';
 @import '../../../styles/button';
+@import '../../../styles/colors';
 
 .bestSellers {
     h4 {
@@ -13,28 +13,44 @@
             font-size: 1.8rem;
         }
     }
-
-    h6 {
-        a {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: $greyColor;
-            text-decoration: underline !important
-        }
-    }
     
-    div {
+    & div {
         @include scrolling-horizontal;
       
         .cardProduct {
-            box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+            margin-right: 10px;
             width: 95%;
             min-height: 130px;
             border-radius: 1.25rem;
+            a {
+                text-decoration: none;
+            }
+        }
+           
+        h6 {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: $primaryColor;
             @include tablet-screen {
-                width: 60%;
-                min-height: 145px;
-                border-radius: 1.5rem;
+                font-size: 0.938rem;
+            }
+            @include desktop-screen {
+                font-size: 1.125rem;
+            }
+        }
+        
+        h5 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: $primaryColor;
+        }
+        
+        .promoPrice {
+            flex-direction: column;
+
+            h6 {
+                text-decoration: line-through;
+                color: $redColor;
             }
             @include desktop-screen {
                 width: 50%;
@@ -42,97 +58,52 @@
                 border-radius: 1.8rem;
             }
             
-            img {
-                width: 100%;
-                height: auto;
-                @include desktop-screen {
-                    width: 95%;
-                    height: 95%;
-                    &:hover {
-                        width: 100%;
-                        height: 100%;
-                        transition: ease-out .5s;
-                    }
-                }
-            }
-            
             a {
                 text-decoration: none;
             }
-            
-            h6 {
+        } 
+        
+        .promo {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: $redColor;
+            box-shadow: 0px 4px 5px rgba(235, 17, 17, 0.3);
+            border-radius: 0.75rem;
+            width: auto;
+            height: 28px;
+
+            p {
+                padding: 3px 10px 0 10px;
                 font-size: 0.875rem;
-                font-weight: 400;
-                color: $primaryColor;
+                font-weight: 600;
+                color: $whiteColor;
+                span {
+                    font-size: .75rem;
+                }
                 @include tablet-screen {
-                    font-size: 0.938rem;
+                    font-size: .938rem;
                 }
                 @include desktop-screen {
                     font-size: 1.125rem;
                 }
-            }
-            
-            h5 {
-                font-size: 0.875rem;
-                font-weight: 500;
-                color: $primaryColor;
-                @include tablet-screen {
-                    font-size: 1rem;
-                }
-                @include desktop-screen {
-                    font-size: 1.25rem;
-                }
-            }
-            
-            .promoPrice {
-                flex-direction: column;
-    
-                h6 {
-                    text-decoration: line-through;
-                    color: $redColor;
-                }
-    
-                h5 {
-                    font-size: 0.875rem; 
-                    color: $primaryColor;
-                    @include tablet-screen {
-                        font-size: 1rem;
-                    }
-                    @include desktop-screen {
-                        font-size: 1.25rem;
-                    }
-                }
-            } 
-            
-            .promo {
-                right: 10px;
-                top: 10px;
-                background-color: $redColor;
-                box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
-                border-radius: 0.75rem;
-                width: auto;
-                height: 28px;
-                @include tablet-screen {
-                    height: 30px;
-                }
-                @include desktop-screen {
-                    height: 35px;
-                }
-                
-                p {
-                    font-size: 0.875rem;
-                    font-weight: 600;
-                    color: $whiteColor;
-                    @include tablet-screen {
-                        font-size: .938rem;
-                    }
-                    @include desktop-screen {
-                        font-size: 1.125rem;
-                        // margin-top: 3px
-                    }
-                }
+            }    
         }
-        
-        }  
+
+        img {
+            width: 100%;
+            height: auto;
+            -webkit-filter: drop-shadow(0px 4px 5px rgba(0, 9, 50, 0.3));
+            filter: drop-shadow(0px 4px 5px rgba(0, 9, 50, 0.3));
+            @include desktop-screen {
+                width: 95%;
+                height: 95%;
+                &:hover {
+                    width: 100%;
+                    height: 100%;
+                    transition: ease-out .5s;
+                }
+            }
+        }
     }
 }

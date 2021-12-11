@@ -1,6 +1,9 @@
 import style from './CanvasSearch.module.scss';
 
 export default function CanvasSearch() {
+  const resetInput = () => {
+    document.getElementById('searchInput').value = '';
+  };
   return (
         <div
           className={`${style.canvasSearch} offcanvas offcanvas-top`}
@@ -26,7 +29,7 @@ export default function CanvasSearch() {
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
               />
-              <a onClick={() => document.getElementById('searchInput').value = ''}>
+              <a onClick={resetInput}>
                   <img src="/icons/x.svg" alt="" />
               </a>
             </div>

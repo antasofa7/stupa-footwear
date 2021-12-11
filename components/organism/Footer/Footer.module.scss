@@ -25,16 +25,9 @@
   h5 {
     font-size: 0.688rem;
     color: $greyColor;
-    @include desktop-screen {
-      font-size: .875rem;
-      line-height: 25px
-    }
   }
   p {
     font-size: 0.625rem;
     color: $bgColor;
-    @include desktop-screen {
-      font-size: .875rem
-    }
   }
 }

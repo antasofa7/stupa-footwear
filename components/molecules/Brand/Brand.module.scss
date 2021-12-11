@@ -7,15 +7,16 @@
 
   .btnBrand {
     @include btn;
+    
       font-size: 0.875rem;
       font-weight: 500;
-      padding: .2rem .75rem;
+      padding: .2rem .875rem;
       color: $primaryColor;
       background-color: $whiteColor;
+      border-radius: 2rem;
       border: 0;
-      margin-right: .313rem;
+      margin-right: 10px;
       box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
-      border-radius: .5rem;
 
       @include tablet-screen {
         font-size: 1rem;

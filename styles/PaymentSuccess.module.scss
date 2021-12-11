@@ -1,0 +1,53 @@
+@import './font';
+@import './colors';
+@import './mixin';
+@import './button';
+
+.paymentSuccess {
+    height: 80vh;
+    padding: 16px;
+    .successArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70vh;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        h4 {
+            margin-bottom: 1rem;
+            font-weight: $semi-bold;
+        }
+        h6 {
+            font-size: .875rem;
+            font-weight: $regular;
+            line-height: 1.375rem;
+            color: $greyColor;
+        }
+    }
+    .tabPane {
+        @include scrolling-horizontal;
+      
+        .tab {
+            @include btn;
+            white-space: nowrap;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: .2rem .875rem;
+            color: $primaryColor;
+            background-color: $whiteColor;
+            border-radius: 2rem;
+            border: 0;
+            margin-right: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
+      
+            @include tablet-screen {
+              font-size: 1rem;
+              font-weight: 500;
+              padding: .5rem 1rem;
+              margin-right: .5rem;
+              border-radius: .75rem;
+            }
+          }
+      }
+}

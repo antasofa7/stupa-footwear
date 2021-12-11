@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import CanvasCart from '../../molecules/CanvasCart';
 import CanvasMenu from '../../molecules/CanvasMenu';
 import CanvasSearch from '../../molecules/CanvasSearch';
@@ -8,61 +9,70 @@ import style from './Navbar.module.scss';
 import NavIcon from './NavIcon';
 
 export default function Navbar() {
+  const [navbarColor, setNavbarColor] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY > 80) {
+      setNavbarColor(true);
+    } else {
+      setNavbarColor(false);
+    }
+  };
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeNavbarColor);
+  }
+  const navbarBG = navbarColor ? 'bg-light' : 'bg-transparent';
   return (
-    <nav className=" sticky-top px-1 px-md-4 pt-lg-3 px-lg-5">
-      <div className="navbar navbar-expand-lg justify-content-between">
+    <nav className={`${style.nav} ${navbarBG} navbar navbar-expand-lg sticky-top px-3 px-md-4 py-lg-4 px-lg-5`}>
         <NavIcon href="#offcanvasMenu" image="/icons/menuBar.svg" classname={`${style.icon} navbar-toggler p-0 border-0`} canvas="offcanvas" />
         <CanvasMenu />
         <NavIcon href="/" image="/images/logo.png" classname={`${style.brand} navbar-brand`} />
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+            <Menu href="/newArrivals" title="New Arrivals" />
+            <Menu href="/bestSellers" title="Best Sellers" />
+            <MenuDropdown
+              title="Sneakers"
+              href1="/collections"
+              dropdownItem1="Kofuku"
+              href2="/collections"
+              dropdownItem2="Ortuseight"
+              href3="/collections"
+              dropdownItem3="Ventela"
+            />
+            <MenuDropdown
+              title="Sports"
+              href1="/collections"
+              dropdownItem1="Piero"
+              href2="/collections"
+              dropdownItem2="Patrobas"
+              href3="/collections"
+              dropdownItem3="Specs"
+            />
+            {/* <MenuDropdown
+              title="Others"
+              href1="/collections"
+              dropdownItem1="Tas"
+              href2="/collections"
+              dropdownItem2="Accesories"
+            />
+            <MenuDropdown
+              title="Info"
+              href1="/collections"
+              dropdownItem1="Payment Confirmation"
+              href2="/collections"
+              dropdownItem2="How to Order"
+              href3="/collections"
+              dropdownItem3="FAQ"
+            /> */}
+          </ul>
+        </div>
         <div className="ms-lg-5">
-          <NavIcon href="#offcanvasSearch" image="/icons/search.svg" canvas="offcanvas" classname={style.icon} />
-          <NavIcon href="/sign-in" image="/icons/user.svg" classname={`${style.icon} mx-3 mx-lg-4`} />
-          <NavIcon href="#offcanvasCart" image="/icons/bag.svg" canvas="offcanvas" classname={style.icon} />
+          <NavIcon href="#offcanvasSearch" image="/icons/search.svg" canvas="offcanvas" />
+          <NavIcon href="/member" image="/icons/user.svg" classname="mx-3 mx-lg-4" />
+          <NavIcon href="#offcanvasCart" image="/icons/bag.svg" canvas="offcanvas" />
           <CanvasSearch />
           <CanvasCart />
         </div>
-      </div>
-        {/* <hr className="d-none d-lg-block" /> */}
-      <div className={`${style.nav} d-none d-lg-flex`} id="navbarNav">
-        <ul className="ms-auto text-lg gap-lg-0 gap-2">
-          <Menu href="/newArrivals" title="New Arrivals" />
-          <Menu href="/bestSellers" title="Best Sellers" />
-          <MenuDropdown
-            title="Sneakers"
-            href1="/collections"
-            dropdownItem1="Kofuku"
-            href2=""
-            dropdownItem2="Ortuseight"
-            href3=""
-            dropdownItem3="Ventela"
-          />
-          <MenuDropdown
-            title="Sports"
-            href1=""
-            dropdownItem1="Piero"
-            href2=""
-            dropdownItem2="Patrobas"
-            href3=""
-            dropdownItem3="Specs"
-          />
-          <MenuDropdown
-            title="Others"
-            href1=""
-            dropdownItem1="Tas"
-            href2=""
-            dropdownItem2="Accesories"
-          />
-          <MenuDropdown
-            title="Information"
-            href1=""
-            dropdownItem1="Payment Confirmation"
-            href2=""
-            dropdownItem2="How to Order"
-            href3=""
-            dropdownItem3="FAQ"
-          />
-        </ul>
-      </div>
     </nav>
   );
 }
