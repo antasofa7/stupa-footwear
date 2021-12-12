@@ -12,4 +12,9 @@
     img {
       padding: 8px 0;
     }
+
+    @include desktop-screen {
+      right: 3rem;
+      bottom: 2.5rem;
+    }
   }

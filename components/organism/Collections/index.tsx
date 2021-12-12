@@ -4,7 +4,7 @@ import CollectionItem from './CollectionItem';
 export default function Collections() {
   return (
         <section className={style.collection}>
-            <h4 className="mt-3 text-md-center text-lg-center">Best Sellers</h4>
+            <h4 className="mt-3 mt-lg-0 mb-lg-3 text-md-center text-lg-center">Best Sellers</h4>
             <div className={style.gridContainer}>
                 <CollectionItem
                   title="Ortuseight Forte Instinct In"

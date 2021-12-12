@@ -2,7 +2,16 @@
 @import './colors';
 @import './button';
 
+.detail {
+    @include desktop-screen {
+        width: 80%;
+        margin: auto;
+    }
+}
 .detailProduct {
+    @include desktop-screen {
+        display: flex;
+    }
     img {
         width: 100%;
         height: auto;
@@ -19,19 +28,30 @@
         border-radius: 0.75rem;
         width: auto;
         height: 30px;
+        @include desktop-screen {
+            height: 40px;
+        }
+        p {
+            font-size: 0.938rem;
+            font-weight: 600;
+            color: $whiteColor;
+            @include desktop-screen {
+                font-size: 1.125rem;
+                
+            }
+        }
     }
     
-    .promo p {
-        font-size: 0.938rem;
-        font-weight: 600;
-        color: $whiteColor;
-    }
     
     .card_detail {
         background-color: $whiteColor;
         border-radius: 40px 40px 0 0;
         padding: 10px 20px;
         box-shadow: 0px -10px 20px rgba(0, 9, 50, 0.1);
+        @include desktop-screen {
+            background: transparent;
+            box-shadow: none;
+        }
 
         .promo_price {
             font-size: .875rem; 
@@ -43,6 +63,9 @@
             color: $primaryColor;
             font-size: 1.25rem;
             font-weight: 500;
+            @include desktop-screen {
+                font-size: 1.5rem;
+            }
         }
         
         h5 {
@@ -58,266 +81,17 @@
         }
         
         .btn_cart {
-            border: 1px solid $primaryColor;
-            padding: 8px 10px;
-            border-radius: 2rem;
+            @include btn;
+            border: 2px solid $primaryColor;
+            // padding: 10px;
+            border-radius: 1rem;
             color: $primaryColor;
             box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
             img {
                 width: auto;
+                filter: none;
             }
         }
     }
     
 }
-
-
-/* @media (max-width: 760px) {
-    .list-product {
-        display: none;
-    }
-} */
-
-/* tablet screen */
-// @media (min-width: 768px) and (max-width: 991.98px) {
-//     nav {
-//         width: 100%;
-//         height: auto;
-//     }
-
-//     main {
-//         width: 90%;
-//         margin: auto;
-//     }
-
-//     .detail-product h5 {
-//         font-size: 1.5rem;
-//     }
-
-//     .img-detail {
-//         width: 100%;
-//     }
-    
-//     .promo {
-//         right: 50px;
-//         top: 10px;
-//         border-radius: 0.75rem;
-//         width: 60px;
-//         height: 35px;
-//     }
-    
-//     .promo p {
-//         font-size: 1.125rem;
-//         font-weight: 600;
-//         color: $whiteColor;
-//     }
-
-//     .price h5 {
-//         color: $primaryColor;
-//         font-size: 1.5rem;
-//         font-weight: 600;
-//         margin-top: 5px;
-//     }
-
-//     .price h6 {
-//         font-size: 1.25rem; 
-//         color: #EB1111; 
-//         text-decoration: line-through; 
-//     }
-    
-//     /* list product */
-//     .list-product h4 {
-//         font-size: 1.5rem;
-//         font-weight: 500;
-//         color: $primaryColor;
-//     }
-    
-//     .card-product {
-//         display: flex;
-//         justify-content: center;
-//         text-align: center;
-//         box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
-//         width: 95%;
-//         min-height: 250px;
-//         border-radius: 20px;
-//     }
-    
-//     .promo {
-//         right: 10px;
-//         top: 10px;
-//         background-color: $redColor;
-//         box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
-//         border-radius: 0.75rem;
-//         width: auto;
-//         height: 30px;
-//     }
-    
-//     .promo p {
-//         font-size: 0.938rem;
-//         font-weight: 600;
-//         color: $whiteColor;
-//     }
-    
-//     .list-product .img-product {
-//         width: 100%;
-//         height: auto;
-//     }
-    
-//     .list-product a {
-//         text-decoration: none;
-//     }
-    
-//     .list-product h6 {
-//         font-size: 0.75rem;
-//         font-weight: 500;
-//         color: $greyColor;
-//     }
-    
-//     .list-product h5 {
-//         font-size: 0.875rem;
-//         font-weight: 600;
-//         color: $primaryColor;
-//     }
-    
-//     .list-product .price {
-//         position: absolute;
-//         bottom: 10px;
-//     }
-// }
-
-// /* laptop screen */
-// @media (min-width: 992px) {   
-//     nav {
-//         width: 100%;
-//         height: auto;
-//     }
-
-//     main {
-//         width: 80%;
-//         margin: auto;
-//     }
-
-//     .detail-product h5 {
-//         font-size: 1.5rem;
-//     }
-
-//     .img-detail {
-//         width: 100%;
-//     }
-    
-//     .promo {
-//         right: 50px;
-//         top: 10px;
-//         border-radius: 0.75rem;
-//         width: 60px;
-//         height: 35px;
-//     }
-    
-//     .promo p {
-//         font-size: 1.125rem;
-//         font-weight: 600;
-//         color: $whiteColor;
-//     }
-
-//     .promo-price h5 {
-//         color: $primaryColor;
-//         font-size: 1.5rem;
-//         font-weight: 600;
-//         margin-top: 5px;
-//     }
-
-//     .promo-price h6 {
-//         font-size: 1.25rem; 
-//         color: #EB1111; 
-//         text-decoration: line-through; 
-//     }
-    
-//     /* list product */
-//     .list-product h4 {
-//         font-size: 1.25rem;
-//         font-weight: 500;
-//         color: $primaryColor;
-//     }
-    
-//     .card-product {
-//         display: flex;
-//         justify-content: center;
-//         text-align: center;
-//         box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
-//         width: 95%;
-//         min-height: 260px;
-//         border-radius: 20px;
-//     }
-    
-//     .promo {
-//         right: 10px;
-//         top: 10px;
-//         background-color: $redColor;
-//         box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
-//         border-radius: 0.75rem;
-//         width: auto;
-//         height: 40px;
-//     }
-    
-//     .promo p {
-//         font-size: 1.125rem;
-//         font-weight: 600;
-//         color: $whiteColor;
-//     }
-    
-//     .list-product .img-product {
-//         width: 100%;
-//         height: auto;
-//     }
-
-//     .list-product .promo {
-//         right: 10px;
-//         top: 10px;
-//         background-color: $redColor;
-//         box-shadow: 0px 4px 10px rgba(235, 17, 17, 0.1);
-//         border-radius: 0.75rem;
-//         width: auto;
-//         height: 30px;
-//     }
-    
-//     .list-product .promo p {
-//         font-size: 0.938rem;
-//         font-weight: 600;
-//         color: $whiteColor;
-//     }
-    
-//     .list-product a {
-//         text-decoration: none;
-//     }
-    
-//     .list-product h6 {
-//         font-size: 0.938rem;
-//         font-weight: 500;
-//         color: $greyColor;
-//     }
-    
-//     .list-product h5 {
-//         font-size: 1rem;
-//         font-weight: 600;
-//         color: $primaryColor;
-//     }
-    
-//     .list-product .price {
-//         position: absolute;
-//         bottom: 10px;
-//     }
-
-//     .list-product .promo-price h5 {
-//         color: $primaryColor;
-//         font-size: 1.25rem;
-//         font-weight: 600;
-//         margin-top: 5px;
-//     }
-
-//     .list-product .promo-price h6 {
-//         font-size: 0.938rem; 
-//         color: #EB1111; 
-//         text-decoration: line-through; 
-//     }
-    
-// }

@@ -9,7 +9,7 @@
   .brand {
     & img {
       width: auto;
-      height: 42px;
+      height: 32px;
     }
     @include desktop-screen {
       width: auto;
@@ -19,7 +19,6 @@
   
   ul {
     display: flex;
-    margin-bottom: 5px;
     li {
       list-style: none;
       a {
@@ -28,34 +27,38 @@
           text-decoration: underline;
         }
       }
-      &:hover > ul{
-        display: block;
-      }
+      // &:hover > ul{
+      //   display: block;
+      // }
       
       ul {
         display: none;
-        background-color: $bgColor;
         color: $primaryColor;
-        margin-top: 4px !important;
-      height: 2rem;
+        margin-top: 1.5rem !important;
+        &::before, &::after {
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid $whiteColor;
+          top: -10px;
+          content: '';
+          left: 30%;
+          margin-left: -10px;
+          position: absolute;
+        }
+        &::before {
+          border-left: 11px solid transparent;
+          border-right: 11px solid transparent;
+          border-bottom: 11px solid;
+          border-bottom-color: inherit; /* Can't be included in the shorthand to work */
+          top: -11px;
+          margin-left: -11px;
+      }
   
       @include tablet-screen {
         width: auto;
         height: 2.5rem;
       }
     }
-  }
-  
-  .icon {
-    @include tablet-screen {
-      width: 42px;
-      height: auto;
-    }
-  }
-  
-  .dropdown-menu {
-    margin-top: 30px;
-    background-color: var(--bgColor);
   }
 }
    

@@ -3,7 +3,8 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar { 
     display: none;
@@ -11,6 +12,7 @@
   
   &> .cardProduct {
     flex: 0 0 auto;
+    -webkit-transform: translateZ(0px);
   }
 }
 
@@ -22,6 +24,12 @@
 
 @mixin desktop-screen {
   @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: 1200px) {
     @content;
   }
 }

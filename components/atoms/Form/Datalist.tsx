@@ -14,7 +14,7 @@ export default function Datalist(props: DatalistProps) {
   } = props;
   return (
         <>
-            <label htmlFor={idInputDatalist} className="form-label">{title}</label>
+            <label htmlFor={idInputDatalist} className="form-label mt-3">{title}</label>
             <input className="form-control" list={idOptionDatalist} id={idInputDatalist} placeholder={title} />
             <datalist id={idOptionDatalist}>
                 <option value={option1}>{option1}</option>

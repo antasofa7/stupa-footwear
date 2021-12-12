@@ -9,7 +9,7 @@ export default function Payment() {
         <>
             <Navbar />
             <section className={style.payment}>
-                <div style={{ minHeight: '75vh' }}>
+                <div className={style.paymentDetail}>
                     <PaymentItem namaBank="Permata Bank" namaPemilik="Andri" nomerRekening="8528 0852 2873 7238" idAccordion="permata" />
                     <PaymentItem namaBank="Dana" namaPemilik="Andri" nomerRekening="0852 2873 7258" idAccordion="dana" />
                     <FormInput type="file" title="Upload Bukti Pembayaran" placeholder="Browse file..." />

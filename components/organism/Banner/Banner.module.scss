@@ -11,8 +11,8 @@
     border-radius: 2rem;
   }
   @include desktop-screen {
-    border-radius: 3rem;
-    width: 90%;
+    background: transparent;
+    box-shadow: none;
   }
   
 
@@ -31,6 +31,7 @@
     }
     @include desktop-screen {
       font-size: $font-size-banner-lg;
+      color: $primaryColor;
     }
   }
 
@@ -48,9 +49,12 @@
       @include btn-banner-md;
     }
     @include desktop-screen {
-      @include btn-banner-lg;
+      @include btn-banner-md;
+      border: 3px solid $orangeColor;
       &:hover {
-        opacity: .9;
+        background-color: transparent;
+        color: $orangeColor;
+        border: 3px solid $orangeColor;
       }
     }
   }

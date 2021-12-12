@@ -17,11 +17,11 @@ export default function BestSellerItem(props: Partial<BestSellerItemProps>) {
   } = props;
 
   return (
-        <div className={`${style.cardProduct} card border-0 p-2`}>
+        <div className={`${style.cardProduct} card border-0 p-2 h-100`}>
             <Link href={href}>
                 <a>
                     <div className="row align-items-center gx-0">
-                        <div className="col-4 ps-2 ps-lg-5 flex-column">
+                        <div className="col-4 col-lg-5 ps-2 p-lg-3 flex-column">
                             <h6>{title}</h6>
                             {promo
                               ? (
@@ -32,7 +32,7 @@ export default function BestSellerItem(props: Partial<BestSellerItemProps>) {
                               )
                               : <h5 className="mt-2 mt-md-3">{price}</h5>}
                         </div>
-                        <div className="col-8">
+                        <div className="col-8 col-lg-7">
                             {promo ? (
                                 <div className={style.promo}>
                                     <p>

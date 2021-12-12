@@ -70,7 +70,7 @@
         }
     }
 
-    @mixin btn {
+    @mixin btnProduct {
         text-align: center;
         box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
         width: 26px;
@@ -81,13 +81,13 @@
     }
 
     .btnMinus {
-        @include btn;
+        @include btnProduct;
         background-color: $bgColor;
         color: $primaryColor;
     }
 
     .btnPlus {
-        @include btn();
+        @include btnProduct;
         background-color: $primaryColor;
         color: $whiteColor;
     }

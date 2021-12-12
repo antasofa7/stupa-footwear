@@ -29,7 +29,7 @@ export default function CollectionItem(props: Partial<CollectionItemProps>) {
                         <div className={style.cardImage}>
                           <img src={`/images/${image}.png`} alt={image} />
                         </div>
-                        <div>
+                        <div className="card-body p-0">
                             <h6>{title}</h6>
                             {promo
                               ? (

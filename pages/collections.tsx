@@ -11,14 +11,14 @@ export default function collections() {
   return (
         <>
         <Navbar />
-        <section className="px-3 pb-3">
+        <main>
             <Brand />
             <Collections />
             <Feature />
             <Testimonial />
             <ToTop />
             <Chat />
-        </section>
+        </main>
         <Footer />
 
         </>

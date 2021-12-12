@@ -1,8 +1,22 @@
 @import '../styles/font';
 @import '../styles/colors';
+@import './mixin';
 
 .payment {
     padding: 16px;
+    @include desktop-screen {
+        width: 50%;
+        margin: auto;
+    }
+    @include large-screen {
+        width: 35%;
+    }
+    .paymentDetail {
+        min-height: 75vh;
+        @include large-screen {
+            min-height: 70vh;
+        }
+    }
 
     h6 {
         font-size: .75rem;
@@ -18,5 +32,8 @@
         font-size: 1.125rem;
         font-weight: $semi-bold;
         margin-top: 7px;
+        @include desktop-screen {
+            font-size: 1.5rem;
+        }
     }
 }

@@ -11,6 +11,10 @@ body {
 
 main {
   padding: 16px;
+  @include desktop-screen {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 label, option, ::placeholder {
@@ -21,7 +25,7 @@ h4 {
   color: $primaryColor;
 }
 
-h1, h2, h3, h4, h5, h6, a, p, input, label, table, textarea, button {
+* {
   letter-spacing: .625px;
 }
 

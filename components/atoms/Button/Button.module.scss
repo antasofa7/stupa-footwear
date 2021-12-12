@@ -4,14 +4,23 @@
 .button {
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 9, 50, 0.1);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   background-color: $primaryColor;
+  border: 2px solid $primaryColor;
+  &:hover {
+    background: transparent;
+    border: 2px solid $primaryColor;
+    color: $primaryColor;
+  }
   a {
     @include btn;
-      color: $whiteColor;
-      border: 0;      
-      padding: .5rem;
-      font-size: 1.125rem;
-      font-weight: 600;
-      }
+    color: $whiteColor;
+    border: 0;      
+    padding: .5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
 }

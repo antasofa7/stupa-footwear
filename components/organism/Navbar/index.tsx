@@ -28,8 +28,8 @@ export default function Navbar() {
         <NavIcon href="/" image="/images/logo.png" classname={`${style.brand} navbar-brand`} />
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
-            <Menu href="/newArrivals" title="New Arrivals" />
-            <Menu href="/bestSellers" title="Best Sellers" />
+            <Menu href="/collections" title="New Arrivals" />
+            <Menu href="/collections" title="Best Sellers" />
             <MenuDropdown
               title="Sneakers"
               href1="/collections"

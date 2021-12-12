@@ -3,8 +3,8 @@ import style from './Brand.module.scss';
 
 export default function Brand() {
   return (
-        <section className="d-lg-none">
-          <div className={`${style.brand} mt-3 mt-md-4 `}>
+        <section className="d-lg-none mt-3">
+          <div className={style.brand}>
               <BrandItem href="/collections" title="Warrior" />
               <BrandItem href="/collections" title="Ventela" />
               <BrandItem href="/collections" title="Patrobas" />
